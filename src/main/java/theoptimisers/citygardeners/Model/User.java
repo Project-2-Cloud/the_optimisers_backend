@@ -1,11 +1,26 @@
 package theoptimisers.citygardeners.Model;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+
+@Entity
+@Table(name = "USER")
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @NotBlank(message = "First name can not be empty")
     private String first_name;
+
+    @NotBlank(message = "Last name can not be empty")
     private String last_name;
+
+    @NotBlank(message = "Role can not be empty")
     private String role;
+
+    @NotBlank(message = "City can not be empty")
     private String city;
 
     public User() {

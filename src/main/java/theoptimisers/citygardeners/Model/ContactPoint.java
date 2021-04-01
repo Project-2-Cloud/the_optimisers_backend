@@ -4,21 +4,31 @@ import com.sun.istack.NotNull;
 import org.apache.logging.log4j.message.Message;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "CONTACT_POINT")
 public class ContactPoint {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
+    @NotBlank(message = "Name can not be empty")
     private String name;
-    private String country;
-    private String city;
-    private String street;
-    private int house_nr;
 
-    public ContactPoint(String name, String country, String city, String street, int house_nr) {
+    @NotBlank(message = "Country can not be empty")
+    private String country;
+
+    @NotBlank(message = "City can not be empty")
+    private String city;
+
+    @NotBlank(message = "Street can not be empty")
+    private String street;
+
+    @NotBlank(message = "House number can not be empty")
+    private String house_nr;
+
+    public ContactPoint(String name, String country, String city, String street, String house_nr) {
         setName(name);
         setCountry(country);
         setCity(city);
@@ -30,11 +40,11 @@ public class ContactPoint {
 
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -70,11 +80,11 @@ public class ContactPoint {
         this.street = street;
     }
 
-    public int getHouse_nr() {
+    public String getHouse_nr() {
         return house_nr;
     }
 
-    public void setHouse_nr(int house_nr) {
+    public void setHouse_nr(String house_nr) {
         this.house_nr = house_nr;
     }
 }

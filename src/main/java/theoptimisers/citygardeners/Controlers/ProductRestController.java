@@ -23,7 +23,6 @@ public class ProductRestController {
     public List<Product> getAllProducts() {
         return Arrays.asList(
                 new Product(
-                        1,
                         "Apple",
                         "Just a red apple",
                         "https://www.google.com/search?q=red+apple&rlz=1C1CHBF_nlBE913BE913&sxsrf=ALeKk00D-Nj8q-iAOhjuDwitqR0BXFZhBQ:1617112495553&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjFr---ldjvAhWhhf0HHRqkCB4Q_AUoAXoECAEQAw&biw=1536&bih=698#imgrc=BFX69DIdKejkVM",

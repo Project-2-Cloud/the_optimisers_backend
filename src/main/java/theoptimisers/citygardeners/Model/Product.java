@@ -1,19 +1,34 @@
 package theoptimisers.citygardeners.Model;
 
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
+@Entity
+@Table(name = "VEGETABLE")
 public class Product {
 
-    private int vegetable_id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long vegetable_id;
+
+    @NotBlank(message = "Title can not be empty")
     private String title;
+
+    @NotBlank(message = "Description can not be empty")
     private String description;
+
+    @NotBlank(message = "Thumbnail url can not be empty")
     private String thumbnail_url;
+
+    @NotNull(message = "Price can not be empty")
     private float price;
 
     public Product() {
 
     }
 
-    public Product(int vegetable_id, String title, String description, String thumbnail_url, float price) {
-        super();
+    public Product(String title, String description, String thumbnail_url, float price) {
         setId(vegetable_id);
         setTitle(title);
         setDescription(description);
@@ -21,11 +36,11 @@ public class Product {
         setPrice(price);
     }
 
-    public int getId() {
+    public Long getId() {
         return vegetable_id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.vegetable_id = id;
     }
 
