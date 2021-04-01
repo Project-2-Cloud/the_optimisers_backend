@@ -27,4 +27,43 @@ public class ForSale {
     @Column(name = "ammount")
     private Integer ammount;
 
+    public ForSale(Long id, Long vegetableId, Long gardenerId, @Positive Integer ammount) {
+        this.id = id;
+        this.vegetableId = vegetableId;
+        this.gardenerId = gardenerId;
+        this.ammount = ammount;
+    }
+    public ForSale(){}
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getVegetableId() {
+        return vegetableId;
+    }
+
+    public void setVegetableId(Long vegetableId) {
+        this.vegetableId = vegetableId;
+    }
+
+    public Long getGardenerId() {
+        return gardenerId;
+    }
+
+    public void setGardenerId(Long gardenerId) {
+        this.gardenerId = gardenerId;
+    }
+
+    public Integer getAmmount() {
+        return ammount;
+    }
+
+    public void setAmmount(Integer ammount) {
+        this.ammount = ammount;
+    }
 }

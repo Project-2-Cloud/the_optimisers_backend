@@ -6,6 +6,7 @@ import theoptimisers.citygardeners.DB.ProductRepository;
 
 @Service
 public class ProductService {
+
     @Autowired
     private ProductRepository productRepository;
 
