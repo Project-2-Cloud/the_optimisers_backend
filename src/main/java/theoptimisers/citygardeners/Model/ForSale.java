@@ -1,10 +1,7 @@
 package theoptimisers.citygardeners.Model;
 
-import com.sun.istack.NotNull;
-import org.aspectj.bridge.Message;
-
 import javax.persistence.*;
-import javax.validation.constraints.Positive;
+import javax.validation.constraints.*;
 
 @Entity
 @Table(name = "FOR_SALE")
@@ -14,16 +11,16 @@ public class ForSale {
     @Column(name = "for_sale_id")
     private Long id;
 
-    @NotNull
+    @NotNull(message= "vegetable id can not be empty")
     @Column(name = "vegetable_id")
     private Long vegetableId;
 
-    @NotNull
+    @NotNull(message= "gardener id can not be empty")
     @Column(name = "gardener_id")
     private Long gardenerId;
 
-    @NotNull
-    @Positive
+    @NotNull(message= "ammount can not be empty")
+    @Positive(message= "ammount has to be positive")
     @Column(name = "ammount")
     private Integer ammount;
 

@@ -1,9 +1,7 @@
 package theoptimisers.citygardeners.Model;
 
-import com.sun.istack.NotNull;
-
 import javax.persistence.*;
-import javax.validation.constraints.Positive;
+import javax.validation.constraints.*;
 
 @Entity
 @Table(name = "SALE")
@@ -13,16 +11,16 @@ public class Sale {
     @Column(name = "sale_id")
     private Long id;
 
-    @NotNull
+    @NotNull(message = "for sale id can not be empty")
     @Column(name = "for_sale_id")
     private Long forSaleId;
 
-    @NotNull
+    @NotNull(message = "buyer id can not be empty")
     @Column(name = "buyer_id")
     private Long buyerId;
 
-    @NotNull
-    @Positive
+    @NotNull(message= "ammount can not be empty")
+    @Positive(message= "ammount has to be positive")
     @Column(name = "ammount")
     private Integer ammount;
 

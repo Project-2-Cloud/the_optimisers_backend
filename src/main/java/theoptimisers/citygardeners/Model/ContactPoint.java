@@ -1,8 +1,5 @@
 package theoptimisers.citygardeners.Model;
 
-import com.sun.istack.NotNull;
-import org.apache.logging.log4j.message.Message;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 

@@ -1,22 +1,21 @@
 package theoptimisers.citygardeners.Model;
 
-import com.sun.istack.NotNull;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.*;
 
 @Entity
 @Table(name = "USER_CONTACT_POINT")
 public class UserContactPoint {
     @Id
-    @NotNull
+    @NotNull(message = "user id can not be empty")
     @Column(name = "user_id")
     private Long userId;
 
     @Id
-    @NotNull
+    @NotNull(message = "contact point id can not be empty")
     @Column(name = "contact_point_id")
     private Long contactPointId;
 
