@@ -10,18 +10,23 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "vegetable_id")
     private Long vegetable_id;
 
     @NotBlank(message = "Title can not be empty")
+    @Column(name = "title")
     private String title;
 
     @NotBlank(message = "Description can not be empty")
+    @Column(name = "discription")
     private String description;
 
     @NotBlank(message = "Thumbnail url can not be empty")
+    @Column(name = "thumbnail_url")
     private String thumbnail_url;
 
     @NotNull(message = "Price can not be empty")
+    @Column(name = "price")
     private float price;
 
     public Product() {

@@ -11,21 +11,27 @@ import javax.validation.constraints.NotBlank;
 public class ContactPoint {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "contact_point_id")
     private Long id;
 
     @NotBlank(message = "Name can not be empty")
+    @Column(name = "name")
     private String name;
 
     @NotBlank(message = "Country can not be empty")
+    @Column(name = "country")
     private String country;
 
     @NotBlank(message = "City can not be empty")
+    @Column(name = "city")
     private String city;
 
     @NotBlank(message = "Street can not be empty")
+    @Column(name = "street")
     private String street;
 
     @NotBlank(message = "House number can not be empty")
+    @Column(name = "house_nr")
     private String house_nr;
 
     public ContactPoint(String name, String country, String city, String street, String house_nr) {

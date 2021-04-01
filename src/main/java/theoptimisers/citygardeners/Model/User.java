@@ -9,18 +9,23 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
     private Long id;
 
     @NotBlank(message = "First name can not be empty")
+    @Column(name = "first_name")
     private String first_name;
 
     @NotBlank(message = "Last name can not be empty")
+    @Column(name = "last_name")
     private String last_name;
 
     @NotBlank(message = "Role can not be empty")
+    @Column(name = "role")
     private String role;
 
     @NotBlank(message = "City can not be empty")
+    @Column(name = "city")
     private String city;
 
     public User() {
