@@ -1,4 +1,4 @@
-package theoptimisers.citygardeners;
+package theoptimisers.citygardeners.Controlers;
 
 import java.util.Arrays;
 import java.util.List;
@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import theoptimisers.citygardeners.Model.Product;
+import theoptimisers.citygardeners.Service.ProductService;
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping("/api/product")

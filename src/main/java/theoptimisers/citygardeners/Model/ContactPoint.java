@@ -1,8 +1,17 @@
-package theoptimisers.citygardeners;
+package theoptimisers.citygardeners.Model;
 
+import com.sun.istack.NotNull;
+import org.apache.logging.log4j.message.Message;
+
+import javax.persistence.*;
+
+@Entity
+@Table(name = "CONTACT_POINT")
 public class ContactPoint {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
 
-    private int id;
     private String name;
     private String country;
     private String city;
@@ -15,6 +24,10 @@ public class ContactPoint {
         setCity(city);
         setStreet(street);
         setHouse_nr(house_nr);
+    }
+
+    public ContactPoint() {
+
     }
 
     public int getId() {

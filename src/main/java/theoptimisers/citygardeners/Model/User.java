@@ -1,4 +1,4 @@
-package theoptimisers.citygardeners;
+package theoptimisers.citygardeners.Model;
 
 public class User {
 
